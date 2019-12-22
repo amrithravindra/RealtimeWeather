@@ -11,6 +11,8 @@ export class CurrentWeatherComponent implements OnInit {
 
   city$: Observable<string>;
   city: string;
+  dateToday: Date;
+  temp: number;
   currentWeather: any = <any>{};
   message: string;
 
@@ -20,6 +22,7 @@ export class CurrentWeatherComponent implements OnInit {
 
   ngOnInit() {
     this.city = 'Toronto';
+    this.dateToday = new Date();
     this.searchWeather(this.city);
   }
 
@@ -29,7 +32,7 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService.getCurrentWeather(city)
     .subscribe(result => {
       this.currentWeather = result;
-      console.log(this.currentWeather);
+      this.temp = (this.currentWeather.main.temp - 273);
     }, error => {
       if (error.error && error.error.message) {
         alert(error.error.message);
