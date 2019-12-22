@@ -1,16 +1,25 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { CurrentWeatherComponent } from './current-weather/current-weather.component';
+import { WeatherService } from './services/weather.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        HttpClientModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        CurrentWeatherComponent
       ],
+      providers: [
+        WeatherService
+      ]
     }).compileComponents();
   }));
 

@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CurrentWeatherComponent } from './current-weather.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { WeatherService } from '../services/weather.service';
 
 describe('CurrentWeatherComponent', () => {
   let component: CurrentWeatherComponent;
@@ -8,7 +10,9 @@ describe('CurrentWeatherComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CurrentWeatherComponent ]
+      declarations: [ CurrentWeatherComponent ],
+      imports: [HttpClientTestingModule],
+      providers: [WeatherService]
     })
     .compileComponents();
   }));
