@@ -57,7 +57,8 @@ export class CurrentWeatherComponent implements OnInit {
       this.sunset = this.currentWeather.sys.sunset;
 
       this.currentWeather.weather.forEach(element => { element.description
-       this.icon = element.main
+       this.icon = element.main.toLowerCase()
+  
       });
     }, error => {
       if (error.error && error.error.message) {
