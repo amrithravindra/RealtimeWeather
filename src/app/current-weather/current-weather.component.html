@@ -23,7 +23,9 @@
 	<p class="temp">Feels Like: {{feels_like | number:'1.0-0'}} °C</p>
 	<p class="temp">Min Temperature: {{temp_min | number:'1.0-0'}} °C</p>
 	<p class="temp">Max Temperature: {{temp_max | number:'1.0-0'}} °C</p>
-	<p class="conditions">Conditions: {{conditions}} </p>
+	<tr *ngFor="let element of currentWeather.weather">
+		<td>Conditions: {{element.main}}</td>
+	</tr>
 	<p class="wind">Wind speed: {{wind}} m/s</p>
 	<p class="humidity">Humidity: {{humidity}}%</p>
 	</div>
