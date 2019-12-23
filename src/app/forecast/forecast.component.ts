@@ -16,9 +16,7 @@ export class ForecastComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.city = 'Toronto';
-    this.dateToday = new Date();
-    
+    this.city = 'Bellevue';
     this.searchForecast(this.city);
   }
 

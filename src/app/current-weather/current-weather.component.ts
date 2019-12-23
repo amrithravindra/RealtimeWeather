@@ -33,7 +33,7 @@ export class CurrentWeatherComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.city = 'Tampa';
+    this.city = 'Bellevue';
     this.dateToday = new Date();
     this.searchWeather(this.city);
   }
@@ -53,8 +53,8 @@ export class CurrentWeatherComponent implements OnInit {
       this.humidity = this.currentWeather.main.humidity;
       this.pressure = this.currentWeather.main.pressure;
       this.visibility = (this.currentWeather.visibility)/1000;
-      this.sunrise = (this.currentWeather.sys.sunrise);
-      this.sunset = (this.currentWeather.sys.sunset);
+      this.sunrise = (this.currentWeather.timezone + this.currentWeather.sys.sunrise + 27500);
+      this.sunset = (this.currentWeather.sys.sunset + this.currentWeather.timezone);
 
       this.currentWeather.weather.forEach(element => { element.main
        this.icon = element.main

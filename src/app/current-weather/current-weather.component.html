@@ -13,7 +13,7 @@
 			<button id="unitBtn" data-units="f">f</button>
 		</nav>
     <h1 class="location">{{city}}</h1>
-		<h2 class="date">{{dateToday}}</h2>
+		<h2 class="date">Local time: {{(currentWeather.dt)*1000 | date:'MMM d, y, h:mm:ss a'}}</h2>
 		<div class="weatherIcon">
 			<div class={{icon}}>
 				<div class="inner"></div>
@@ -31,8 +31,8 @@
 	<p class="humidity">Humidity: {{humidity}}%</p>
 	<p class="humidity">Air Pressure: {{pressure}} hPa</p>
 	<p class="visibility">Visibility: {{visibility}} Km</p>
-	<p class="sunrise">Sunrise: {{sunrise * 1000 | date:'HH:mm:ss'}}</p>
-	<p class="sunset">Sunset: {{sunset * 1000 | date:'HH:mm:ss'}}</p>
+	<p class="sunrise">Sunrise: {{(sunrise)*1000 | date:'MMM d, y, h:mm:ss a'}}</p>
+	<p class="sunset">Sunset: {{(sunset) | date:'MMM d, y, h:mm:ss a'}}</p>
 	</div>
 	<!-- Future Forecast
 	<div id="future" class="wrapper">
