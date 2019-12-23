@@ -9,10 +9,15 @@ import { Observable } from 'rxjs';
 })
 export class CurrentWeatherComponent implements OnInit {
 
-  city$: Observable<string>;
   city: string;
   dateToday: Date;
   temp: number;
+  feels_like: number;
+  temp_min: number;
+  temp_max: number
+  pressure: number;
+  humidity: number;
+  wind: number;
   currentWeather: any = <any>{};
   message: string;
 
@@ -32,7 +37,13 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService.getCurrentWeather(city)
     .subscribe(result => {
       this.currentWeather = result;
+      console.log(this.currentWeather);
       this.temp = (this.currentWeather.main.temp - 273);
+      this.feels_like= (this.currentWeather.main.feels_like - 273);
+      this.temp_min = (this.currentWeather.main.temp_min - 273);
+      this.temp_max = (this.currentWeather.main.temp_max - 273);
+      this.wind = this.currentWeather.wind.speed;
+      this.humidity = this.currentWeather.main.humidity;
     }, error => {
       if (error.error && error.error.message) {
         alert(error.error.message);
