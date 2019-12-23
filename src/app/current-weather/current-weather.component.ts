@@ -53,10 +53,10 @@ export class CurrentWeatherComponent implements OnInit {
       this.humidity = this.currentWeather.main.humidity;
       this.pressure = this.currentWeather.main.pressure;
       this.visibility = (this.currentWeather.visibility)/1000;
-      this.sunrise = (this.currentWeather.timezone + this.currentWeather.sys.sunrise + 27500);
-      this.sunset = (this.currentWeather.sys.sunset + this.currentWeather.timezone);
+      this.sunrise = this.currentWeather.sys.sunrise;
+      this.sunset = this.currentWeather.sys.sunset;
 
-      this.currentWeather.weather.forEach(element => { element.main
+      this.currentWeather.weather.forEach(element => { element.description
        this.icon = element.main
       });
     }, error => {

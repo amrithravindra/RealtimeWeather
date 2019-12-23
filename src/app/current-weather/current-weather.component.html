@@ -23,16 +23,13 @@
 	<p class="feels_like">Feels Like: {{feels_like | number:'1.0-0'}} °C</p>
 	<p class="temp_min">Min Temperature: {{temp_min | number:'1.0-0'}} °C</p>
 	<p class="temp_max">Max Temperature: {{temp_max | number:'1.0-0'}} °C</p>
-	<tr *ngFor="let element of currentWeather.weather">
-		<td>Conditions: {{element.main}}</td>
-	</tr>
-	
+	<p>Conditions: {{icon}}</p>
 	<p class="wind">Wind speed: {{wind}} m/s</p>
 	<p class="humidity">Humidity: {{humidity}}%</p>
 	<p class="humidity">Air Pressure: {{pressure}} hPa</p>
 	<p class="visibility">Visibility: {{visibility}} Km</p>
 	<p class="sunrise">Sunrise: {{(sunrise)*1000 | date:'MMM d, y, h:mm:ss a'}}</p>
-	<p class="sunset">Sunset: {{(sunset) | date:'MMM d, y, h:mm:ss a'}}</p>
+	<p class="sunset">Sunset: {{(sunset)*1000 | date:'MMM d, y, h:mm:ss a'}}</p>
 	</div>
 	<!-- Future Forecast
 	<div id="future" class="wrapper">
