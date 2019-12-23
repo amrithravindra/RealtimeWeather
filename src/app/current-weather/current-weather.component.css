@@ -15,7 +15,7 @@ html, body {
 	width: 100%;
 }
 body {
-	/* color: #fff; */
+	background-color: #86B9E0;
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 300;
 	position: relative;
@@ -24,7 +24,7 @@ body {
 	text-align: center;
 }
 a {
-	color: #6D8CA0;
+	color: white;
 	font-weight: 700;
 	text-decoration: none;
 }
@@ -294,10 +294,8 @@ nav {
 	}
 }
 
-*---------------------------------------------
-	PURE CSS WEATHER ICONS
-	Class names match the icon values returned
-	from the Wunderground API
+*--------------------------------------------
+    WEATHER ICONS
 ----------------------------------------------*/
 * { box-sizing: border-box; }
 html { background: #86B9E0; }
