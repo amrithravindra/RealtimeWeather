@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from '../services/weather.service';
 import { Observable } from 'rxjs';
+import { Time } from '@angular/common';
 
 @Component({
   selector: 'app-current-weather',
@@ -11,6 +12,7 @@ export class CurrentWeatherComponent implements OnInit {
 
   city: string;
   dateToday: Date;
+  icon: string;
   temp: number;
   feels_like: number;
   temp_min: number;
@@ -19,7 +21,11 @@ export class CurrentWeatherComponent implements OnInit {
   humidity: number;
   wind: number;
   visibility: number;
+  sunrise: number;
+  sunset: number;
+  
   currentWeather: any = <any>{};
+  Forecast: any = <any>{};
   message: string;
 
   constructor(
@@ -27,7 +33,7 @@ export class CurrentWeatherComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.city = 'Toronto';
+    this.city = 'Tampa';
     this.dateToday = new Date();
     this.searchWeather(this.city);
   }
@@ -45,7 +51,14 @@ export class CurrentWeatherComponent implements OnInit {
       this.temp_max = (this.currentWeather.main.temp_max - 273);
       this.wind = this.currentWeather.wind.speed;
       this.humidity = this.currentWeather.main.humidity;
+      this.pressure = this.currentWeather.main.pressure;
       this.visibility = (this.currentWeather.visibility)/1000;
+      this.sunrise = (this.currentWeather.sys.sunrise);
+      this.sunset = (this.currentWeather.sys.sunset);
+
+      this.currentWeather.weather.forEach(element => { element.main
+       this.icon = element.main
+      });
     }, error => {
       if (error.error && error.error.message) {
         alert(error.error.message);
@@ -54,10 +67,9 @@ export class CurrentWeatherComponent implements OnInit {
       }
       alert('Failed to get weather !');
     }, () => {
-
-   
     })
   }
+
   resultFound(){
     return Object.keys(this.currentWeather).length > 0;
   }

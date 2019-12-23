@@ -1,21 +1,21 @@
 <body>
 	<!-- Status Bar -->
-	<!-- <div id="status">
+	<div id="status">
 		<p></p>
 		<button class="close"><i class="fa fa-times" aria-hidden="true"></i></button>
-	</div> -->
+	</div>
 	<!-- Current Weather -->
 	<div id="current" class="wrapper">
-		<!-- <nav>
+		<nav>
 			<button id="locateBtn">
 				<i class="fa fa-location-arrow" aria-hidden="true"></i>
 			</button>
 			<button id="unitBtn" data-units="f">f</button>
-		</nav> -->
+		</nav>
     <h1 class="location">{{city}}</h1>
 		<h2 class="date">{{dateToday}}</h2>
 		<div class="weatherIcon">
-			<div class="sunny">
+			<div class={{icon}}>
 				<div class="inner"></div>
 			</div>
 		</div>
@@ -26,9 +26,13 @@
 	<tr *ngFor="let element of currentWeather.weather">
 		<td>Conditions: {{element.main}}</td>
 	</tr>
-	<p class="visibility">Visibility: {{visibility}} Km</p>
+	
 	<p class="wind">Wind speed: {{wind}} m/s</p>
 	<p class="humidity">Humidity: {{humidity}}%</p>
+	<p class="humidity">Air Pressure: {{pressure}} hPa</p>
+	<p class="visibility">Visibility: {{visibility}} Km</p>
+	<p class="sunrise">Sunrise: {{sunrise * 1000 | date:'HH:mm:ss'}}</p>
+	<p class="sunset">Sunset: {{sunset * 1000 | date:'HH:mm:ss'}}</p>
 	</div>
 	<!-- Future Forecast
 	<div id="future" class="wrapper">

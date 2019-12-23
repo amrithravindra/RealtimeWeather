@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { WeatherService } from './services/weather.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ForecastComponent } from './forecast/forecast.component';
 
 
 describe('AppComponent', () => {
@@ -15,7 +16,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        CurrentWeatherComponent
+        CurrentWeatherComponent,
+        ForecastComponent
       ],
       providers: [
         WeatherService

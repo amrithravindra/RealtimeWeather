@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { WeatherService } from './services/weather.service';
+import { ForecastComponent } from './forecast/forecast.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CurrentWeatherComponent
+    CurrentWeatherComponent,
+    ForecastComponent
   ],
   imports: [
     BrowserModule,
