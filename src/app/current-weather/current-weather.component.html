@@ -20,12 +20,13 @@
 			</div>
 		</div>
 	<p class="temp">Temperature: {{temp | number:'1.0-0'}} °C</p>
-	<p class="temp">Feels Like: {{feels_like | number:'1.0-0'}} °C</p>
-	<p class="temp">Min Temperature: {{temp_min | number:'1.0-0'}} °C</p>
-	<p class="temp">Max Temperature: {{temp_max | number:'1.0-0'}} °C</p>
+	<p class="feels_like">Feels Like: {{feels_like | number:'1.0-0'}} °C</p>
+	<p class="temp_min">Min Temperature: {{temp_min | number:'1.0-0'}} °C</p>
+	<p class="temp_max">Max Temperature: {{temp_max | number:'1.0-0'}} °C</p>
 	<tr *ngFor="let element of currentWeather.weather">
 		<td>Conditions: {{element.main}}</td>
 	</tr>
+	<p class="visibility">Visibility: {{visibility}}</p>
 	<p class="wind">Wind speed: {{wind}} m/s</p>
 	<p class="humidity">Humidity: {{humidity}}%</p>
 	</div>
@@ -63,7 +64,7 @@
 		</div>
 	</div> -->
 	<footer>
-    <p id="lastUpdated">Last updated on:</p> <p>{{dateToday}}</p>
+    <p id="lastUpdated">Last updated on: {{dateToday}}</p>
 		<p>Created by <a href="https://amrithravindra.github.io" title="Visit Portfolio Site" target="_blank">Amrith Ravindra</a> | Weather data from <a href="https://openweathermap.org/" title="Wunderground.com" target="_blank">OpenWeather</a></p>
 	</footer>
 </body>
