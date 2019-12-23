@@ -45,7 +45,7 @@ export class CurrentWeatherComponent implements OnInit {
       this.temp_max = (this.currentWeather.main.temp_max - 273);
       this.wind = this.currentWeather.wind.speed;
       this.humidity = this.currentWeather.main.humidity;
-      this.visibility = this.currentWeather.visibility;
+      this.visibility = (this.currentWeather.visibility)/1000;
     }, error => {
       if (error.error && error.error.message) {
         alert(error.error.message);
