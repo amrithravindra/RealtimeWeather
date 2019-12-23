@@ -19,12 +19,12 @@
 				<div class="inner"></div>
 			</div>
 		</div>
-	<p class="temp">Temperature: {{temp}} °C</p>
-	<p class="temp">Feels Like {{feels_like}} °C</p>
-	<p class="temp">Min Temperature: {{temp_min}} °C</p>
-	<p class="temp">Max Temperature: {{temp_max}} °C</p>
-	<p class="conditions">Conditions: </p>
-	<p class="wind">Wind speed: {{wind}} mph</p>
+	<p class="temp">Temperature: {{temp | number:'1.0-0'}} °C</p>
+	<p class="temp">Feels Like: {{feels_like | number:'1.0-0'}} °C</p>
+	<p class="temp">Min Temperature: {{temp_min | number:'1.0-0'}} °C</p>
+	<p class="temp">Max Temperature: {{temp_max | number:'1.0-0'}} °C</p>
+	<p class="conditions">Conditions: {{conditions}} </p>
+	<p class="wind">Wind speed: {{wind}} m/s</p>
 	<p class="humidity">Humidity: {{humidity}}%</p>
 	</div>
 	<!-- Future Forecast
