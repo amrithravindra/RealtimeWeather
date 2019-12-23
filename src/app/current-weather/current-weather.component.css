@@ -1,7 +1,7 @@
 /*----------------
 	General
 -----------------*/
-{
+*{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
@@ -50,14 +50,6 @@ footer {
 	content: ' --';
 }
 
-/*----------------
-	Containers
------------------*/
-.wrapper {
-	/* color: #fff; */
-	overflow: auto;
-	width: 100%;
-}
 
 /*----------------
 	Status Bar
