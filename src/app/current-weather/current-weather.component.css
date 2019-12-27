@@ -511,17 +511,17 @@ h1.title {
 	top: 13%;
 	width: 55%;
 }
-.fog > .inner:before, .fog > .inner:after, .hazy > .inner:before, .hazy > .inner:after {
+.fog > .inner:before, .fog > .inner:after, .haze > .inner:before, .haze > .inner:after, .mist > .inner:before, .mist > .inner:after, .smoke > .inner:before, .smoke > .inner:after, .sand > .inner:before, .sand > .inner:after, .dust > .inner:before, .dust > .inner:after, .ash > .inner:before, .haze > .ash:after, .tornado > .inner:before, .tornado > .inner:after, .squall > .inner:before, .squall > .inner:after  {
 	color: #fff;
 	content: "\2307";
 	font-size: 5em;
 	left: 7%;
 	transform: rotate(90deg);
 }
-.fog > .inner:before, .hazy > .inner:before {
+.fog > .inner:before, .haze > .inner:before, .mist > .inner:before, .sand > .inner:before, .dust > .inner:before, .ash > .inner:before, .squall > .inner:before, .tornado > .inner:before, .smoke > .inner:before {
 	bottom: 14%;
 }
-.fog > .inner:after, .hazy > .inner:after {
+.fog > .inner:after, .haze > .inner:after, .mist > .inner:before, .sand > .inner:before, .dust > .inner:before, .ash > .inner:before, .squall > .inner:before, .tornado > .inner:before, .smoke > .inner:before {
 	bottom: 0;
 }
 
