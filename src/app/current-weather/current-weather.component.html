@@ -12,6 +12,9 @@
 			</button>
 			<button id="unitBtn" data-units="f">f</button>
 		</nav> -->
+		<input #newCity
+      (keyup.enter)="searchWeather(newCity.value)">
+    <button (click)="searchWeather(newCity.value)">Search City</button>
     <h1 class="location">{{city}}</h1>
 		<h2 class="date">Local time: {{(currentWeather.dt)*1000 | date:'MMM d, y, h:mm:ss a'}}</h2>
 		<div class="weatherIcon">

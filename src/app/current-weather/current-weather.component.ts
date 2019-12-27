@@ -33,12 +33,11 @@ export class CurrentWeatherComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.city = 'Bellevue';
     this.dateToday = new Date();
-    this.searchWeather(this.city);
   }
 
   searchWeather(city: string) {
+    this.city = city;
     this.message = '';
     this.currentWeather = {};
     this.weatherService.getCurrentWeather(city)
