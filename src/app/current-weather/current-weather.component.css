@@ -521,7 +521,7 @@ h1.title {
 .fog > .inner:before, .haze > .inner:before, .mist > .inner:before, .sand > .inner:before, .dust > .inner:before, .ash > .inner:before, .squall > .inner:before, .tornado > .inner:before, .smoke > .inner:before {
 	bottom: 14%;
 }
-.fog > .inner:after, .haze > .inner:after, .mist > .inner:before, .sand > .inner:before, .dust > .inner:before, .ash > .inner:before, .squall > .inner:before, .tornado > .inner:before, .smoke > .inner:before {
+.fog > .inner:after, .haze > .inner:after, .mist > .inner:after, .sand > .inner:after, .dust > .inner.high:after, .ash > .inner:after, .squall > .inner:after, .tornado > .inner:after, .smoke > .inner:after {
 	bottom: 0;
 }
 
