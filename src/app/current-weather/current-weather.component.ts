@@ -43,7 +43,6 @@ export class CurrentWeatherComponent implements OnInit {
     this.weatherService.getCurrentWeather(city)
     .subscribe(result => {
       this.currentWeather = result;
-      console.log(this.currentWeather);
       this.temp = (this.currentWeather.main.temp - 273);
       this.feels_like= (this.currentWeather.main.feels_like - 273);
       this.temp_min = (this.currentWeather.main.temp_min - 273);
@@ -52,8 +51,8 @@ export class CurrentWeatherComponent implements OnInit {
       this.humidity = this.currentWeather.main.humidity;
       this.pressure = this.currentWeather.main.pressure;
       this.visibility = (this.currentWeather.visibility)/1000;
-      this.sunrise = this.currentWeather.sys.sunrise;
-      this.sunset = this.currentWeather.sys.sunset;
+      this.sunrise = (this.currentWeather.sys.sunrise*1000);
+      this.sunset = (this.currentWeather.sys.sunset*1000);
 
       this.currentWeather.weather.forEach(element => { element.description
        this.icon = element.main.toLowerCase()
